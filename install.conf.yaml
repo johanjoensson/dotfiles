@@ -1,16 +1,16 @@
 - defaults:
-  link:
-    relink: true
+    link:
+      relink: true
 
 - clean: ['~']
 
 - link: 
-  ~/.dotfiles: ''
-  ~/.vim: vim
-  ~/.config/vim: config/vim
-  ~/.vimrc: vimrc
-  ~/.bashrc: bashrc
-    #  ~/.config/kitty: config/kitty
+    ~/.dotfiles: ''
+    ~/.vim: vim
+    ~/.config/vim: config/vim
+    ~/.vimrc: vimrc
+    ~/.bashrc: bashrc
+    ~/.config/kitty: config/kitty
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
