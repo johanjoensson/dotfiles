@@ -7,9 +7,10 @@
 - link: 
   ~/.dotfiles: ''
   ~/.vim: vim
+  ~/.config/vim: config/vim
   ~/.vimrc: vimrc
   ~/.bashrc: bashrc
-    #  ~/.config/kitty: kitty
+    #  ~/.config/kitty: config/kitty
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
