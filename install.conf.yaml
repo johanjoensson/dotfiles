@@ -1,0 +1,16 @@
+- defaults:
+  link:
+    relink: true
+
+- clean: ['~']
+
+- link: 
+  ~/.dotfiles: ''
+  ~/.vim: vim
+  ~/.vimrc: vimrc
+  ~/.bashrc: bashrc
+    #  ~/.config/kitty: kitty
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+  - ["vim +PlugUpdate +PlugClean! +qa", Installing and updating plugins]

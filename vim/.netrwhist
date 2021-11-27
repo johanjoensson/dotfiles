@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =4
+let g:netrw_dirhist_4='/home/jjonsson/Dokument/Research/Surface-states-Heavy-atoms/Tm-STM/Gamma'
+let g:netrw_dirhist_3='/home/jjonsson/Dokument/Research/Surface-states-Heavy-atoms/Tm-STM/Full'
+let g:netrw_dirhist_2='/home/jjonsson/Programming/mesh/include'
+let g:netrw_dirhist_1='/usr/include'
+let g:netrw_dirhist_0='/home/jjonsson/Programming/mesh/build/python/CMakeFiles'
+let g:netrw_dirhist_9='/home/jjonsson/Programming/gsl-ASW/src'
+let g:netrw_dirhist_8='/home/jjonsson/Programming/gsl-ASW/tests'
+let g:netrw_dirhist_7='/home/jjonsson/Programming/verlet'
+let g:netrw_dirhist_6='/home/jjonsson/Programming/GSL-lib/build/CMakeFiles/GSLpp.dir'
+let g:netrw_dirhist_5='/usr/include/gsl'
