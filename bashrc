@@ -137,6 +137,7 @@ LESS_TERMCAP_us=$'\E[04;38;5;146m' \
 man "$@"
 }
 
-if [[ $- == *i* && $0 == 'bash' ]]; then
-    ~/.dotfiles/scripts/login.sh
+if [[ $- == *i* && $0 =~ .*'bash'.* ]]; then
+    sh ~/.dotfiles/scripts/login.sh
 fi
+
