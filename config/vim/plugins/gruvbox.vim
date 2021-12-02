@@ -1,0 +1,2 @@
+Plug 'sainnhe/gruvbox-material'
+

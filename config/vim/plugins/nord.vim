@@ -1,0 +1,2 @@
+Plug 'arcticicestudio/nord-vim'
+
