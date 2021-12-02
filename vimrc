@@ -89,9 +89,12 @@ source ~/.config/vim/plugins/coc.vim
 source ~/.config/vim/plugins/commentary.vim
 source ~/.config/vim/plugins/context-commentstring.vim
 source ~/.config/vim/plugins/csapprox.vim
+source ~/.config/vim/plugins/nord.vim
+source ~/.config/vim/plugins/gruvbox.vim
 
 
 call plug#end()
+colorscheme nord
 " doautocmd User PlugLoaded
 
 set t_Co=256

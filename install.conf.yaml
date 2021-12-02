@@ -10,7 +10,7 @@
     ~/.config/vim: config/vim
     ~/.vimrc: vimrc
     ~/.bashrc: bashrc
-    ~/.config/kitty: config/kitty
+    ~/.config/kitty: kitty
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
