@@ -1,8 +1,7 @@
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
-" let g:airline_theme = 'wombat'
-let g:airline_theme = 'bubblegum'
+let g:airline_theme = 'nord_minimal'
 let g:airline_powerline_fonts = 1
 let g:airline_skip_empty_sections = 1
 

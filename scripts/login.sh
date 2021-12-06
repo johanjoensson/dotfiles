@@ -12,6 +12,33 @@ NC='\033[0m' # No Color
 # _______|7##RMMM7#R|______|7##RMMM7#R|__
 # _________\WWWWWWWW/________\WWWWWWWW/__
 
+cow_mode[1]="-b"
+cow_mode[2]="-d"
+cow_mode[3]="" # default
+cow_mode[4]="-g"
+cow_mode[5]="-p"
+cow_mode[6]="-s"
+cow_mode[7]="-t"
+cow_mode[8]="-w"
+cow_mode[9]="-y"
+
+rng=$(( $RANDOM % 9 + 1))
+
+IFS=' '
+cowfiles=(`cowsay -l | sed 1d | paste -sd " "`)
+num_files=${#cowfiles[*]}
+cowfile=${cowfiles[$((RANDOM % num_files))]}
+
+#/\\\\\\\\\\~~~~~~~/\\\\\\\\\\~~~~~~
+#\////////\\\~~~~~~\////////\\\~~~~~
+#~~~~~~~~\/\\\~~~~~~~~~~~~~\/\\\~~~~
+#~~~~~~~~~\/\\\~~~~~~~~~~~~~\/\\\~~~
+#~~~~~~~~~~\/\\\~~~~~~~~~~~~~\/\\\~~
+#~~~~~~~~~~~\/\\\~~~~~~~~~~~~~\/\\\~
+#~~~~~/\\\~~~\/\\\~~~~~~/\\\~~~\/\\\
+#~~~~~\//\\\\\\\\\~~~~~~\//\\\\\\\\\
+#~~~~~~~\/////////~~~~~~~~\/////////
+
 printf '
 _\\MMMMMMMMM7\\______\\MMMMMMMMM7\\________
 __\\WWWWWWW7#R\\______\\WWWWWWW7#R\\_______
@@ -22,8 +49,7 @@ _____________\\7#R\\_____________\\7#R\\___
 _______/7R\\___\\7#R\\______/7R\\___\\7#R\\__
 _______|7##RMMM7#R|______|7##RMMM7#R|__
 _________\\WWWWWWWW/________\\WWWWWWWW/__
-       ' | lolcat -r -h 0.65 -v 0.4
-
+' | lolcat
 
 h=`date +%H`
 if [ $h -lt 6 ]; then
@@ -42,5 +68,5 @@ else
   greetings='God natt'
 fi
 printf "
-       $greetings dr. Jönsson!" | lolcat
+       $greetings dr. Jönsson!" |  cowsay  ${cow_mode[$rng]} -f $cowfile  | lolcat
 echo
