@@ -12,33 +12,6 @@ NC='\033[0m' # No Color
 # ________|7##RMMM7#R||7##RMMM7#R|__
 # __________\WWWWWWWW/__\WWWWWWWW/__
 
-cow_mode[1]="-b"
-cow_mode[2]="-d"
-cow_mode[3]="" # default
-cow_mode[4]="-g"
-cow_mode[5]="-p"
-cow_mode[6]="-s"
-cow_mode[7]="-t"
-cow_mode[8]="-w"
-cow_mode[9]="-y"
-
-rng=$(( $RANDOM % 9 + 1))
-
-IFS=' '
-cowfiles=(`cowsay -l | sed 1d | paste -sd " "`)
-num_files=${#cowfiles[*]}
-cowfile=${cowfiles[$((RANDOM % num_files))]}
-
-#/\\\\\\\\\\~~~~~~~/\\\\\\\\\\~~~~~~
-#\////////\\\~~~~~~\////////\\\~~~~~
-#~~~~~~~~\/\\\~~~~~~~~~~~~~\/\\\~~~~
-#~~~~~~~~~\/\\\~~~~~~~~~~~~~\/\\\~~~
-#~~~~~~~~~~\/\\\~~~~~~~~~~~~~\/\\\~~
-#~~~~~~~~~~~\/\\\~~~~~~~~~~~~~\/\\\~
-#~~~~~/\\\~~~\/\\\~~~~~~/\\\~~~\/\\\
-#~~~~~\//\\\\\\\\\~~~~~~\//\\\\\\\\\
-#~~~~~~~\/////////~~~~~~~~\/////////
-
 printf '
 __\\MMMMMMMMM7\\\\MMMMMMMMM7\\________
 ___\\WWWWWWW7#R\\\\WWWWWWW7#R\\_______
@@ -68,5 +41,5 @@ else
   greetings='God natt'
 fi
 printf "
-       $greetings dr. Jönsson!" |  cowsay  ${cow_mode[$rng]} -f $cowfile  | lolcat
+       $greetings dr. Jönsson!"  | lolcat
 echo
