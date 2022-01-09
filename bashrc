@@ -24,6 +24,9 @@ shopt -s autocd 2> /dev/null
 # Line wrap on window resize
 shopt -s checkwinsize 2> /dev/null
 
+# Sudo tab completion
+complete -cf sudo
+
 # Case-insensitive tab completetion
 bind 'set completion-ignore-case on'
 
