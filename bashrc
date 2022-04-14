@@ -55,7 +55,7 @@ export HISTFILESIZE=10000
 
 export EDITOR="vim"
 
-alias ls='ls -lhF --color'
+alias ls='ls -lhF --color --hyperlink=auto'
 alias lsa='ls -A'
 alias lsd="ls --color | /usr/bin/grep --color=never '^d'"
 alias lsda="lsa | /usr/bin/grep --color=never '^d'"
