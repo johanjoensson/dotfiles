@@ -110,7 +110,7 @@ if [[ "$USER" == "root" ]]; then
 	prompt_col_2=$red
 elif [[ "$SSH_TTY" ]]; then
 	prompt_col_1=$brightgreen
-	prompt_col_2=$green
+	prompt_col_2=$magenta
 else
 	prompt_col_1=$brightyellow
 	prompt_col_2=$yellow
