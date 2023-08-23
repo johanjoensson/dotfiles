@@ -49,7 +49,6 @@ set fileencoding=utf-8
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let mapleader = "\<space>"
 nmap <leader>ve :edit ~/.vimrc<cr>
-" nmap <leader>vc :edit ~/.config/nvim/coc-settings.json<cr>
 nmap <leader>vr :source ~/.vimrc<cr>
 
 map gf :edit <cfile><cr>
@@ -59,11 +58,10 @@ nmap <silent> <C-j> <C-w>j
 nmap <silent> <C-k> <C-w>k
 nmap <silent> <C-l> <C-w>l
 
-vnoremap < <gv
-vnoremap > >gv
-
-vnoremap y myy`y
-vnoremap Y myY`y
+xnoremap <TAB> >gv
+xnoremap <S-TAB> <gv
+xnoremap < <gv
+xnoremap > >gv
 
 nmap <leader>x :!xdg-open %<cr><cr>
 
@@ -76,6 +74,7 @@ imap ,, <Esc>A,<Esc>
 " Plugins
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let data_dir = '~/.vim'
+" Install plug if it is not already installed in the $data_dir/autoload folder
 if empty(glob('~/.vim/autoload/plug.vim'))
         silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
         autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
@@ -83,15 +82,18 @@ endif
 call plug#begin('~/.vim/plugged')
 
 source ~/.config/vim/plugins/airline.vim
-source ~/.config/vim/plugins/coc.vim
 source ~/.config/vim/plugins/commentary.vim
 source ~/.config/vim/plugins/context-commentstring.vim
 source ~/.config/vim/plugins/csapprox.vim
 source ~/.config/vim/plugins/nord.vim
 source ~/.config/vim/plugins/gruvbox.vim
+source ~/.config/vim/plugins/undotree.vim
+source ~/.config/vim/plugins/fugitive.vim
+source ~/.config/vim/plugins/ale.vim
 
 
 call plug#end()
+
 colorscheme nord
 " doautocmd User PlugLoaded
 
