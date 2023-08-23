@@ -4,14 +4,24 @@
 
 - clean: ['~']
 
+- create: 
+  - ~/.local/share/vim/backup/
+  - ${XDG_DATA_HOME:-$HOME/.local/share}/nvim
+  - ${XDG_CONFIG_HOME:~$HOME}/.config/vim/nvim
+  - ${XDG_CONFIG_DIRS:/etc/xdg}/nvim
+
 - link: 
     ~/.dotfiles: ''
     ~/.vim: vim
     ~/.config/vim: config/vim
     ~/.vimrc: vimrc
     ~/.bashrc: bashrc
-    ~/.config/kitty: kitty
+    ~/.config/kitty: config/kitty
+    ~/.config/nvim: config/nvim
+    ~/.local/share/nvim: share/nvim
+    config/nvim/init.vim: vimrc
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
   - ["vim +PlugUpdate +PlugInstall +PlugClean! +qa", Installing and updating plugins]
+  - ["nvim +PlugUpdate +PlugInstall +PlugClean! +qa", Installing and updating plugins]
