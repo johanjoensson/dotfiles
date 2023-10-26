@@ -12,18 +12,6 @@ NC='\033[0m' # No Color
 # ________|7##RMMM7#R||7##RMMM7#R|__
 # __________\WWWWWWWW/__\WWWWWWWW/__
 
-printf '
-__\\MMMMMMMMM7\\\\MMMMMMMMM7\\________
-___\\WWWWWWW7#R\\\\WWWWWWW7#R\\_______
-___________\\7#R\\_______\\7#R\\______
-____________\\7#R\\_______\\7#R\\_____
-_____________\\7#R\\_______\\7#R\\____
-______________\\7#R\\_______\\7#R\\___
-________/7R\\___\\7#R\\/7R\\___\\7#R\\__
-________|7##RMMM7#R||7##RMMM7#R|__
-__________\\WWWWWWWW/__\\WWWWWWWW/__
-       ' | lolcat -r -h 0.65 -v 0.4
-
 h=`date +%H`
 if [ $h -lt 6 ]; then
   greetings='God natt'
@@ -41,5 +29,18 @@ else
   greetings='God natt'
 fi
 printf "
-       $greetings dr. Jönsson!"  | lolcat
-echo
+__\\MMMMMMMMM7\\\\MMMMMMMMM7\\________
+___\\WWWWWWW7#R\\\\WWWWWWW7#R\\_______
+___________\\7#R\\_______\\7#R\\______
+____________\\7#R\\_______\\7#R\\_____
+_____________\\7#R\\_______\\7#R\\____
+______________\\7#R\\_______\\7#R\\___
+________/7R\\___\\7#R\\/7R\\___\\7#R\\__
+________|7##RMMM7#R||7##RMMM7#R|__
+__________\\WWWWWWWW/__\\WWWWWWWW/__
+$greetings dr. Jönsson!
+       " | lolcat -F 0.4
+
+# printf "
+#        $greetings dr. Jönsson!"  | lolcat -a -F 0.4
+# echo
