@@ -1,15 +1,20 @@
 Plug 'dense-analysis/ale'
 
 function! SmartInsertCompletion() abort
-        " Use the default CTRL-N in completion menus
         if pumvisible()
+                " Use the default CTRL-N in completion menus
                 return "\<C-n>"
+        elseif CheckBackSpace()
+                " If at the beginning of a line, insert tab
+                return "\<tab>"
+        else
+                " Exit and re-enter insert mode, and use insert completion
+                return "\<C-c>a\<C-n>"
         endif
-        " Exit and re-enter insert mode, and use insert completion
-        return "\<C-c>a\<C-n>"
 endfunction
 
-inoremap <silent> <C-n> <C-R>=SmartInsertCompletion()<CR>
+inoremap <silent> <tab> <C-r>=SmartInsertCompletion()<CR>
+inoremap <silent> <S-tab> <C-p>
 nmap <silent> gd <Plug>(ale_go_to_definition)
 nmap <silent> gt <Plug>(ale_go_to_type_definition)
 nmap <silent> gi <Plug>(ale_go_to_implementation)

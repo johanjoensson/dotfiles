@@ -142,3 +142,4 @@ if [[ $- == *i* && $0 =~ .*'bash'.* ]]; then
     sh ~/.dotfiles/scripts/login.sh
 fi
 
+eval "$(direnv hook bash)"

@@ -3,7 +3,7 @@ require'nvim-treesitter.configs'.setup {
 ensure_installed = { "c", "cpp", "python", "fortran", "julia", "lua", "vim", "vimdoc" },
 
 -- Install parsers synchronously (only applied to `ensure_installed`)
-sync_install = false,
+sync_install = true,
 
 -- Automatically install missing parsers when entering buffer
 -- Recommendation: set to false if you don't have `tree-sitter` CLI installed locally
@@ -37,6 +37,9 @@ end,
 -- Using this option may slow down your editor, and you may see some duplicate highlights.
 -- Instead of true it can also be a list of languages
 additional_vim_regex_highlighting = false,
+},
+indent = {
+        enable = true
 },
 }
 
