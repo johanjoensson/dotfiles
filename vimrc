@@ -96,6 +96,7 @@ source ~/.config/vim/plugins/nord.vim
 source ~/.config/vim/plugins/gruvbox.vim
 source ~/.config/vim/plugins/undotree.vim
 source ~/.config/vim/plugins/fugitive.vim
+source ~/.config/vim/plugins/vim-tmux-navigator.vim
 if !has('nvim')
         source ~/.config/vim/plugins/ale.vim
         source ~/.config/vim/plugins/ctrlp.vim
