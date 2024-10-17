@@ -97,9 +97,14 @@ source ~/.config/vim/plugins/gruvbox.vim
 source ~/.config/vim/plugins/undotree.vim
 source ~/.config/vim/plugins/fugitive.vim
 source ~/.config/vim/plugins/vim-tmux-navigator.vim
+source ~/.config/vim/plugins/vim-cmake.vim
+" source ~/.config/vim/plugins/csv.vim
+source ~/.config/vim/plugins/vinegar.vim
 if !has('nvim')
         source ~/.config/vim/plugins/ale.vim
         source ~/.config/vim/plugins/ctrlp.vim
+        set foldmethod=syntax
+        source ~/.config/vim/plugins/simpylfold.vim
 else
         source ~/.config/vim/plugins/lsp-zero.nvim
         source ~/.config/vim/plugins/treesitter.nvim
@@ -119,7 +124,7 @@ set t_Co=256
 highlight Normal ctermbg=NONE
 highlight nonText ctermbg=NONE
 
-" highlight! link SignColumn LineNr
+highlight! link SignColumn LineNr
 highlight! SignColumn ctermbg=none guibg=background
 highlight! Pmenu ctermbg=none guibg=background
 

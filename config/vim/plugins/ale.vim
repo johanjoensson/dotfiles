@@ -1,4 +1,26 @@
 Plug 'dense-analysis/ale'
+let g:ale_completion_enabled = 1
+set completeopt=menu,popup,noinsert,noselect
+let g:ale_sign_warning='●'
+let g:ale_sign_error='●'
+hi ALEErrorSign ctermfg=red ctermbg=none
+hi ALEWarningSign ctermfg=yellow ctermbg=none
+
+let g:ale_set_loclist = 0
+let g:ale_set_quickfix = 1
+let g:ale_open_list = 0
+let g:ale_list_vertical = 1
+" ale_keep_list_window_open
+
+let g:ale_lint_on_text_changed = 'normal'
+let g:ale_lint_on_insert_leave = 0
+" Run linter when opening file
+let g:ale_lint_on_enter = 1
+let g:ale_fix_on_save = 1
+
+let g:ale_fixers = {
+\   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\}
 
 function! SmartInsertCompletion() abort
         if pumvisible()
